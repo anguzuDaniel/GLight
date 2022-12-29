@@ -1,7 +1,9 @@
-# Remove the question mark from the request but maintain the query string
-RewriteEngine On
-RewriteBase /
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-l
-RewriteRule ^(.*)$ index.php?$1 [L,QSA]
+# Redirects query string to non-query string
+
+RewriteCond %{THE_REQUEST} ^(GET|HEAD)\ /\?([^\ ]+)
+RewriteRule ^ /%2? [L,R,NE]
+
+# And back
+
+RewriteCond %{REQUEST_URI} .=.
+RewriteRule ^/?(.*)$ /?$1 [L]

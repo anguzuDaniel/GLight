@@ -5,7 +5,7 @@ namespace App\Controllers;
 /**
  * Posts
  */
-class Home
+class Home extends \Core\Controller
 {
     /**
      * index

@@ -2,10 +2,11 @@
 
 namespace App\Controllers;
 
+
 /**
  * Posts
  */
-class Posts
+class Posts extends \Core\Controller
 {
     /**
      * index

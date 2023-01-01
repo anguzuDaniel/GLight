@@ -3,7 +3,7 @@
     "description": "A light weight php framework",
     "autoload": {
         "psr-4": {
-            "AnguzuDaniel\\Glight\\": "src/"
+            "app\\": "./"
         }
     },
     "authors": [

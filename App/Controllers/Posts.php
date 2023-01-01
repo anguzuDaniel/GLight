@@ -29,5 +29,11 @@ class Posts extends \Core\Controller
     {
         echo "Hello form the addNew action on the Posts Controller!";
     }
-}
 
+    public function edit()
+    {
+        echo "Hello from the edit action in the Posts controller";
+        echo "<p>Query string parameters: </pre>" .
+            htmlspecialchars(print_r($this->routeParams, true)) . "</pre></p>";
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "anguzu-daniel/glight",
+    "description": "A light weight php framework",
+    "autoload": {
+        "psr-4": {
+            "AnguzuDaniel\\Glight\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "anguzuDaniel",
+            "email": "102733205+anguzuDaniel@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}

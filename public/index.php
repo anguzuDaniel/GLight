@@ -11,18 +11,17 @@
 /**
  * Autoloader
  */
-spl_autoload_register(function ($class) {
-    $root = dirname(__DIR__);   // get the parent directory
-    $file = $root . '/' . str_replace('\\', '/', $class) . '.php';
-    if (is_readable($file)) {
-        require_once $root . '/' . str_replace('\\', '/', $class) . '.php';
-    }
+require_once __DIR__."./../vendor/autoload.php";
+use app\core\Application;
+
+
+$app = new Application(dirname(__DIR__));
+
+$app->router->get('/', 'home');
+
+$app->router->get('/contact', 'contact');
+$app->router->post('/contact', function () {
+    return "Handling submitted data";
 });
 
-$app = new \Core\Application();
-
-$router = new \Core\Router();
-
-$app->run('/', function () {
-    echo "Hello World";
-});
+$app->run();

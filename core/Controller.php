@@ -1,6 +1,6 @@
 <?php
 
-namespace Core;
+namespace app\core;
 
 class Controller
 {
@@ -9,7 +9,7 @@ class Controller
      *
      * @var array
      */
-    protected $routeParams = [];
+    protected array $routeParams = [];
 
     /**
      * __construct
@@ -17,7 +17,7 @@ class Controller
      * @param  mixed $routeParams
      * @return void
      */
-    public function __construct($routeParams)
+    public function __construct(mixed $routeParams)
     {
         $this->routeParams = $routeParams;
     }

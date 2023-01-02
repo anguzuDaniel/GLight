@@ -6,7 +6,7 @@ namespace App\Controllers;
 /**
  * Posts
  */
-class Posts extends \Core\Controller
+class Posts extends \core\Controller
 {
     /**
      * index
